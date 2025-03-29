@@ -6,6 +6,8 @@
 </head>
 <body>
 <script>
+    /*PRIMITIVE DATA TYPES _ (07)*/
+
     var x = "hello";
 
     var age = 28;
@@ -28,6 +30,12 @@
     var x;
     console.log(typeof a)
     console.log(typeof x) /*Both are undefined*/
+
+    x = Symbol('foo')
+    console.log(typeof x) /*data type symbol*/
+
+    x = BigInt(100000000000000000000); /* use for big numbers ,digits */
+    console.log(typeof x);
 
 
 </script>
