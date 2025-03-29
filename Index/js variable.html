@@ -21,11 +21,13 @@
     b = "hello";
     console.log(typeof b) /* JS VARIABLES are Loosely type variables which means we can assign any data type to variables*/
 
+    b = null;
+    console.log(typeof b /*null returns the type as Object but its a bug in JS*/)
 
     a = undefined;
     var x;
-    console.log(a)
-    console.log(x) /*Both are undefined*/
+    console.log(typeof a)
+    console.log(typeof x) /*Both are undefined*/
 
 
 </script>
