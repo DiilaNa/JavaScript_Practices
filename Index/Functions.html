@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-/*   Named Functions - A Function as a statement */
+////////////////// Named Functions - A Function as a statement //////////////
 
 function myFunctions() {
   console.log("Named Function")
@@ -27,11 +27,20 @@ function myFunctions3(num1,num2) { /*Return a value*/
 let sumFromMethod = myFunctions3(100,200)
 console.log(sumFromMethod)
 
-/*   Function Expressions - */
+////////////////  Function Expressions ///////////////////
 
+const myFunction4 = function () {
+    console.log("Function Expressions")
+}
+myFunction4()
 
+const myFunction5 = function (num1, num2) {
+    return num1+num2;
+}
+let myResult = myFunction5(60,20);
+console.log(myResult);
 
-/*   Arrow Functions -   */
+//////////////   Arrow Functions    ///////////////////////
 
 /*   Function Constructor - */
 
