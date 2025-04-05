@@ -46,8 +46,20 @@
     console.log(newStr1.localeCompare(newStr2)); // 0
     console.log(newStr1.localeCompare(newStr3)); // -1   /*compare two strings*/
 
+    str = "hello, world!";
+    // Extracts a specified number of characters from a string,starting at a specified index
+    str.substr(7); // 'world!'
+    str.substring(7); // 'world!'
+    str.substr(7, 12); // 'world!'
+    str.substring(7, 12); // 'world'
 
+    let x = "hello"
+    console.log(x.toUpperCase())
+    let y = "HELLO"
+    console.log(y.toLowerCase())
 
+    str = "hello, world!"
+    console.log(str.length) /*13*/
 </script>
 </body>
 </html>
