@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let marks = 67 ;
+
+ /*
+    METHOD ONE USING IF CONDITION
+
+   if (marks >= 75) {
+      console.log("A");
+    } else if (marks >= 65) {
+      console.log("B");
+    } else if (marks >= 50) {
+      console.log("C");
+    } else if (marks >= 35) {
+      console.log("s");
+    } else {
+      console.log("Fail");
+    }*/
+
+  let result = (marks > 75) ? "A" : (marks>65) ? "B" : (marks>50) ? "C" : (marks>35) ? "S" : "Fail"
+  console.log("Your Grade is " + result);/*String concat - method one*/
+  console.log(`Your Grade is: ${result}`); /*method two*/
+
+</script>
+</body>
+</html>
