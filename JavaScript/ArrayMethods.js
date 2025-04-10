@@ -50,3 +50,8 @@ console.log(z3)
 let z4 = a.slice(-3)
 console.log(z4)
 
+/*------SPLICE()-REMOVE ELEMENTS FROM THE GIVEN INDEX OF THE ARRAY--------*/
+a.splice(6)
+console.log(a)
+a.splice(2,3)/*REMOVE elements that start from the given index and given count,from the 2 index remove 3 elements*/
+console.log(a) /*[10,20,60]= 30,40,50 has removed*/
