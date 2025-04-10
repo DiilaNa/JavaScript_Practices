@@ -16,3 +16,8 @@ console.log(myArray.pop())
 let myArray2 = ['anil','Ranil','Nimal'];
 console.log(myArray2.shift())
 console.log(myArray2)
+
+/*------UNShift()-Add an elements to the start of an array --------*/
+console.log(myArray2.unshift("HELLO PEOPLE"))
+console.log(myArray2)
+
