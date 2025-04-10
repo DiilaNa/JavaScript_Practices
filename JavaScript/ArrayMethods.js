@@ -55,3 +55,10 @@ a.splice(6)
 console.log(a)
 a.splice(2,3)/*REMOVE elements that start from the given index and given count,from the 2 index remove 3 elements*/
 console.log(a) /*[10,20,60]= 30,40,50 has removed*/
+
+/*------REVERSE()-REVERSE ELEMENTS OF THE ARRAY--------*/
+a.reverse()
+console.log(a)
+
+
+
