@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS WITH JAVA SCRIPT-Dom_Manipulation 2</title>
+</head>
+<body>
+<h1>WELCOME TO IJSE</h1>
+<h2>WELCOME TO INTERNET TECHNOLOGY</h2>
+<script>
+    /*Method-ONE*/
+    document.getElementsByTagName('h1')[0].style.color = 'white';
+    document.getElementsByTagName('h1')[0].style.backgroundColor='Gray';
+    /*Method-TWO*/
+    var styles = "color:blue; background:yellow;";
+    document.getElementsByTagName('h2')[0].style.cssText = styles;
+</script>
+</body>
+</html>
