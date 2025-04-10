@@ -84,12 +84,12 @@ console.log(result)
 j.forEach(function (item) {
     console.log(item)
 })
-console.log("CRETATING AN ARRAY")
+console.log("CREATING AN ARRAY")
 
 
 /*----------CREATING AN ARRAY----------------*/
 
-/*-------Array.of--------*/
+/*-------Array.of()--------*/
 let myNewARRAY = Array.of(2,3,4,5,6,7,8)
 console.log(myNewARRAY)
 
@@ -101,4 +101,4 @@ console.log(n)
 let n2 = Array.from('hello')
 console.log(n2)
 
-console.log(n)
+console.log(n)/*doesnt need this,add for debugs*/
