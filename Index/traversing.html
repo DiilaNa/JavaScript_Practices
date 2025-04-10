@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+  <ul>
+    <li>Front-End</li>
+    <li>Back-End</li>
+    <li>Countries
+      <ol>
+        <li>SL</li>
+        <li>UK</li>
+        <li>USA</li>
+      </ol>
+    </li>
+  </ul>
+<script>
+  console.log(document.getElementsByTagName("li"))
+  console.log(document.getElementsByTagName("li")[0])
+  console.log(document.getElementsByTagName("li")[1].parentElement);
+  console.log(document.getElementsByTagName("li")[5]);
+  console.log(document.getElementsByTagName("li")[5].parentElement);
+
+  console.log(document.getElementsByTagName("ol"));
+  console.log(document.getElementsByTagName("ol")[0]);
+  console.log(document.getElementsByTagName("ol")[0].children);
+  console.log(document.getElementsByTagName("ol")[0].children[0]);
+  console.log(document.getElementsByTagName("ol")[0].children[1]);
+  console.log(document.getElementsByTagName("ol")[0].children[2]);
+
+  console.log(document.getElementsByTagName("ol")[0].firstElementChild);
+  console.log(document.getElementsByTagName("ol")[0].lastElementChild);
+
+  console.log(document.getElementsByTagName("ul")[0].lastElementChild.firstElementChild.children[2])
+
+
+
+
+</script>
+</section>
+</body>
+</html>
