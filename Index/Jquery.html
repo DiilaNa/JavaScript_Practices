@@ -5,6 +5,26 @@
     <title>JQuery</title>
 </head>
 <body>
+<h1>Welcome to Jquery</h1>
+<h2>Welcome to Basics</h2>
+<h2>Welcome to advanced</h2>
+<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam delectus ea hic ipsam neque quaerat, voluptate? Aliquid dolore fugiat recusandae repellendus totam. Eos, vel.</p>
+<a href="#">Click me</a>
+<a href="#">Validate</a>
+<script src="../Lib/jquery-3.7.1.min.js"></script>
+<script>
+/* document.getElementsByTagName("h1")[0].style.background = "yellow"*/
+    $("h1").css("background","yellow");
+    $(".description").css("color","red")
+/*var styles= "color: white; background-color: blue;"
+document.getElementsByTagName("h2")[0].style.cssText = styles ;*/
+    $("h2").css({
+        'color' : "white",
+        'background-color': "blue",
+        'font-size' : "3rem"
+    })
 
+
+</script>
 </body>
 </html>
