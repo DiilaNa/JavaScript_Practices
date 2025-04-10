@@ -73,14 +73,32 @@ b.map(r => r); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 b.map(r => r*2); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
 
-/*FILTER-use to filter data under a condition */
+/*---------FILTER-use to filter data under a condition--------- */
 let j = [1,2,3,4,5,6,7,8,9,10]
 let result = j.filter(function (i){
     return i % 2 == 1;
 });
 console.log(result)
 
-/*FOR EACH-can not return an array like map()*/
+/*---------FOR EACH-can not return an array like map()----------*/
 j.forEach(function (item) {
     console.log(item)
 })
+console.log("CRETATING AN ARRAY")
+
+
+/*----------CREATING AN ARRAY----------------*/
+
+/*-------Array.of--------*/
+let myNewARRAY = Array.of(2,3,4,5,6,7,8)
+console.log(myNewARRAY)
+
+/*-------Array.from()-creating an array using an array*/
+let n = Array.from([1,2,3,4,5],x => x*2)
+console.log(n)
+
+/*get string as characters*/
+let n2 = Array.from('hello')
+console.log(n2)
+
+console.log(n)
