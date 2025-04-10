@@ -60,5 +60,9 @@ console.log(a) /*[10,20,60]= 30,40,50 has removed*/
 a.reverse()
 console.log(a)
 
-
-
+/*------SORT()-SORT ELEMENTS OF THE ARRAY--------*/
+let b = [20,10,50,40,70,400,30,60,150]
+b.sort(); // not sort properly [10, 100, 150, 20, 30, 40, 400, 50, 60, 70]
+b.sort((a, b) => a - b); // Ascending order sort -> [10, 20, 30, 40, 50, 60, 70, 100, 150, 400]
+b.sort((a, b) => b - a); // Descending order sort -> [400, 150, 100, 70, 60, 50, 40, 30, 20, 10]
+console.log(b)
