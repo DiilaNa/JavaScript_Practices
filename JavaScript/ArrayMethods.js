@@ -66,3 +66,21 @@ b.sort(); // not sort properly [10, 100, 150, 20, 30, 40, 400, 50, 60, 70]
 b.sort((a, b) => a - b); // Ascending order sort -> [10, 20, 30, 40, 50, 60, 70, 100, 150, 400]
 b.sort((a, b) => b - a); // Descending order sort -> [400, 150, 100, 70, 60, 50, 40, 30, 20, 10]
 console.log(b)
+
+/*------MAP()- LIKE A FOR LOOP GET ITEMS ONE BY ONE--------*/
+b.map(r => {console.log(r);}) /*r = gets values and index*/
+b.map(r => r); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+b.map(r => r*2); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+
+/*FILTER-use to filter data under a condition */
+let j = [1,2,3,4,5,6,7,8,9,10]
+let result = j.filter(function (i){
+    return i % 2 == 1;
+});
+console.log(result)
+
+/*FOR EACH-can not return an array like map()*/
+j.forEach(function (item) {
+    console.log(item)
+})
