@@ -21,3 +21,8 @@ console.log(myArray2)
 console.log(myArray2.unshift("HELLO PEOPLE"))
 console.log(myArray2)
 
+/*------CONCAT()-ADDING AN ARRAY TO AN ARRAY --------*/
+let myArray3 = myArray.concat(myArray2)
+console.log(myArray3) /*---myArray+myArray2----*/
+
+
