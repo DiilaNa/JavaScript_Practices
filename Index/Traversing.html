@@ -17,6 +17,7 @@
       </ol>
     </li>
   </ul>
+<script src="../Lib/jquery-3.7.1.min.js"></script>
 <script>
   console.log(document.getElementsByTagName("li"))
   console.log(document.getElementsByTagName("li")[0])
@@ -35,6 +36,31 @@
   console.log(document.getElementsByTagName("ol")[0].lastElementChild);
 
   console.log(document.getElementsByTagName("ul")[0].lastElementChild.firstElementChild.children[2])
+  /*Traversing Using Jquery*/
+  console.log($("ol"))
+  console.log($("ol").parents())  /*show parents*/
+  console.log($("ol").parents('section'))
+  console.log($("ol").parentsUntil('section')) /*show parents until find section as a parent*/
+
+  /*eq = select elements by its index*/
+  console.log($("ul").children()) /*select children*/
+  console.log($("ul").children().eq(0))
+  console.log($("ul").children().eq(2))
+  console.log($("ul").children().eq(2).children())
+  console.log($("ul").children().eq(2).children().eq(0))
+  console.log($('ul').children().eq(2).children().eq(0).children())
+  console.log($('ul').children().eq(2).children().eq(0).children().eq(1))
+
+  console.log($('ul').children().eq(2).children().eq(0).children().eq(1).text()) /*get the inner text*/
+  console.log($('ul').children().eq(2).children().eq(0).children().eq(1).html()) /*get the inner html*/
+
+  console.log($('ul').children().eq(2).children().eq(0).children().eq(1).text("UAE")) /*update inner text*/
+  console.log($('ul').children().eq(2).children().eq(0).children().eq(2).html("CANADA")) /*update inner Html*/
+
+
+
+
+
 
 
 
