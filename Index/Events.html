@@ -19,14 +19,19 @@
 <body>
 
 
-<button>Click Me</button>
+<!--<button>Click Me</button>
 <button>Reset</button>
-<!--
+&lt;!&ndash;
 <div></div>
--->
-<script src="../Lib/jquery-3.7.1.min.js"></script>
+&ndash;&gt;
 <input type="text" id="MyInput">
-<h1></h1>
+<h1></h1>-->
+<script src="../Lib/jquery-3.7.1.min.js"></script>
+<!--Jquery Elements-->
+
+<button id="ok">OK</button>
+<div id="box"></div>
+<input type="text" id="fname">
 
 <script>
     let btn = document.getElementsByTagName("button")[0];
@@ -93,24 +98,56 @@
         console.log("Key Press")
     })*/
 
-    input.addEventListener('input',function (e){
-        console.log("Input Event " + e.target.value)
-        document.getElementsByTagName('h1')[0].innerText = e.target.value;
+    // input.addEventListener('input',function (e){
+    //     console.log("Input Event " + e.target.value)
+    //     document.getElementsByTagName('h1')[0].innerText = e.target.value;
+    // })
+    //
+    // btn.addEventListener('click',function (){
+    //     let c = document.getElementById('MyInput').value
+    //     console.log(c)
+    // })
+    //
+    // let reset_btn = document.getElementsByTagName('button')[1];
+    // reset_btn.addEventListener('click',function (){
+    //     document.getElementById('MyInput').value = "" ;
+    //     document.getElementsByTagName('h1')[0].innerText = "" ;
+    // })
+
+    /// Previous work using Jquery
+    $("#ok").on('click', function() {
+        console.log('clicked ok!');
     })
 
-    btn.addEventListener('click',function (){
-        let c = document.getElementById('MyInput').value
-        console.log(c)
+    $("#ok").on('dblclick', function() {
+        console.log('clicked dbl ok!');
     })
 
-    let reset_btn = document.getElementsByTagName('button')[1];
-    reset_btn.addEventListener('click',function (){
-        document.getElementById('MyInput').value = "" ;
-        document.getElementsByTagName('h1')[0].innerText = "" ;
+    $("#ok").on('mousedown', function() {
+        console.log('clicked mousedown!');
     })
 
+    $("#ok").on('mouseup', function() {
+        console.log('mouseup!');
+    })
 
+    $("#box").on('mousemove', function() {
+        console.log('mouse_move!');
+    })
 
+    $("#fname").on('keydown', function() {
+        console.log('keydown!');
+    });
+
+    $("#fname").on('keyup', function() {
+        console.log('keyup!');
+    });
+
+    $("#fname").on('keypress', function(e) {
+        // console.log('keypress!: ' + e.key);
+        console.log(e.keyCode === 13);
+        let value = document.getElementById("fname").value;
+    });
 
 
 
