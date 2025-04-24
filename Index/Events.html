@@ -15,9 +15,18 @@
 <script src="../Lib/jquery-3.7.1.min.js"></script>
 <script>
     let btn = document.getElementsByTagName("button")[0];
-    btn.addEventListener('click',function (){
+   /*
+   (Method-One )
+   btn.addEventListener('click',function (){
+        console.log("clicked")
+    })*/
+
+    /*(Method - Two) has some issues*/
+    btn.addEventListener('click',()=> {
         console.log("clicked")
     })
+
+
 </script>
 </body>
 </html>
