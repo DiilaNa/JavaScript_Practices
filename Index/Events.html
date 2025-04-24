@@ -17,36 +17,41 @@
     </style>
 </head>
 <body>
+
+
 <button>Click Me</button>
 <div></div>
 <script src="../Lib/jquery-3.7.1.min.js"></script>
+<input type="text" id="MyInput">
+
+
 <script>
     let btn = document.getElementsByTagName("button")[0];
-
-    /*MOUSE EVENTS*/
-
 /*
+    /!*MOUSE EVENTS*!/
+
+/!*
    (Method-One )
-*/
+*!/
    btn.addEventListener('click',function (){
         console.log("clicked")
     })
 
-/*
+/!*
     (Method - Two) has some issues
-*/
+*!/
     btn.addEventListener('click',()=> {
         console.log("clicked")
     })
-    /*Double Click*/
+    /!*Double Click*!/
     btn.addEventListener('dblclick',function (){
         console.log("Double clicked")
     })
 
 
-    /*Mouse up and down means mouse press / click
+    /!*Mouse up and down means mouse press / click
     * (Not mouse moving)
-    * */
+    * *!/
     btn.addEventListener('mouseup',function (){
         console.log("Mouse up")
     })
@@ -68,7 +73,24 @@
 
     div_element.addEventListener('mousemove',function (){
         console.log("Mouse move");
+    })*/
+
+    // KeyBoard Events
+
+    let input = document.getElementById("MyInput");
+    input.addEventListener("keydown",function (){
+        console.log("Key Down")
     })
+
+    input.addEventListener("keyup",function (){
+        console.log("Key Up")
+    })
+
+    input.addEventListener("keypress",function (){
+        console.log("Key Press")
+    })
+
+
 
 
 
