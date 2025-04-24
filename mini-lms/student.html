@@ -41,8 +41,8 @@
         <label for="address" class="form-label">Address</label>
         <textarea class="form-control" id="address" style="height: 100px"></textarea>
       </div>
-      <button type="button" class="btn btn-primary">Save</button>
-      <button type="button" class="btn btn-primary">Reset</button>
+      <button id="student-save" type="button" class="btn btn-primary">Save</button>
+      <button id="student-reset" type="button" class="btn btn-primary">Reset</button>
     </form>
   </div>
 </div>
@@ -57,11 +57,47 @@
     <th scope="col">Address</th>
   </tr>
   </thead>
-  <tbody>
+  <tbody id="student-tbody">
   </tbody>
 </table>
 
 <script src="../Lib/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script>
+   $('#student-save').on('click',function (){
+
+    let fname = $('#fname').val();
+    let lname = $('#lname').val();
+    let address = $('#address').val();
+    console.log(`fname: ${fname}, lname: ${lname}, address: ${address}`);
+
+    let data = `<tr>
+            <td>${1}</td>
+            <td>${fname}</td>
+            <td>${lname}</td>
+            <td>${address}</td>
+        </tr>`
+
+    $('#student-tbody').append(data);
+
+    clearForm();
+
+  })
+
+   $('#student-reset').on('click',function (){
+     clearForm();
+   })
+
+   function clearForm() {
+     $('#fname').val('');
+     $('#lname').val('');
+     $('#address').val('');
+   }
+
+
+
+
+
+</script>
 </body>
 </html>
