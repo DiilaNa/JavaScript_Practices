@@ -20,10 +20,13 @@
 
 
 <button>Click Me</button>
+<button>Reset</button>
+<!--
 <div></div>
+-->
 <script src="../Lib/jquery-3.7.1.min.js"></script>
 <input type="text" id="MyInput">
-
+<h1></h1>
 
 <script>
     let btn = document.getElementsByTagName("button")[0];
@@ -78,7 +81,7 @@
     // KeyBoard Events
 
     let input = document.getElementById("MyInput");
-    input.addEventListener("keydown",function (){
+    /*input.addEventListener("keydown",function (){
         console.log("Key Down")
     })
 
@@ -88,7 +91,25 @@
 
     input.addEventListener("keypress",function (){
         console.log("Key Press")
+    })*/
+
+    input.addEventListener('input',function (e){
+        console.log("Input Event " + e.target.value)
+        document.getElementsByTagName('h1')[0].innerText = e.target.value;
     })
+
+    btn.addEventListener('click',function (){
+        let c = document.getElementById('MyInput').value
+        console.log(c)
+    })
+
+    let reset_btn = document.getElementsByTagName('button')[1];
+    reset_btn.addEventListener('click',function (){
+        document.getElementById('MyInput').value = "" ;
+        document.getElementsByTagName('h1')[0].innerText = "" ;
+    })
+
+
 
 
 
