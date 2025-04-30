@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple SPA</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .page {
+      display: none; /* hide all by default */
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-link" data-page="home">Home</a>
+  <a href="#" class="nav-link" data-page="about">About</a>
+  <a href="#" class="nav-link" data-page="contact">Contact</a>
+</nav>
+
+<div id="home" class="page">
+  <h1>Home Page</h1>
+  <p>Welcome to the home section.</p>
+</div>
+
+<div id="about" class="page">
+  <h1>About Page</h1>
+  <p>This is the about section.</p>
+</div>
+
+<div id="contact" class="page">
+  <h1>Contact Page</h1>
+  <p>This is the contact section.</p>
+</div>
+
+<script>
+  $(document).ready(function () {
+    // Show only the home page on load
+    $(".page").hide();       // Hide all sections
+    $("#home").show();       // Show home section
+
+    // Handle navigation click
+    $(".nav-link").click(function (e) {
+      e.preventDefault();                    // Prevent default link behavior
+      const pageId = $(this).data("page");   // Get the page to show
+      $(".page").hide();                     // Hide all sections
+      $("#" + pageId).show();                // Show the selected section
+    });
+  });
+</script>
+
+</body>
+</html>
