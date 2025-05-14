@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test-02</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+        input.invalid {
+            border: 2px solid red;
+        }
+
+    </style>
+</head>
+<body>
+<form id="posForm">
+    <label for="itemCode">Item Code:</label>
+    <input type="text" id="itemCode" name="itemCode" required>
+    <span id="itemCodeError" class="error-message"></span>
+
+    <label for="itemName">Item Name:</label>
+    <input type="text" id="itemName" name="itemName" required>
+    <span id="itemNameError" class="error-message"></span>
+
+    <label for="price">Price:</label>
+    <input type="text" id="price" name="price" required>
+    <span id="priceError" class="error-message"></span>
+
+    <button type="submit">Submit</button>
+</form>
+<script>
+    document.getElementById("posForm").addEventListener("submit", function (e) {
+        e.preventDefault(); // prevent default form submission
+
+        // Get field values
+        const itemCode = document.getElementById("itemCode").value.trim();
+        const itemName = document.getElementById("itemName").value.trim();
+        const price = document.getElementById("price").value.trim();
+
+        // Regex patterns
+        const itemCodeRegex = /^I\d{3}$/;           // e.g. I001, I123
+        const itemNameRegex = /^[A-Za-z ]{3,}$/;    // Minimum 3 characters, only letters and spaces
+        const priceRegex = /^\d+(\.\d{2})?$/;       // e.g. 10, 10.00, 100.99
+
+        let valid = true;
+
+        // Item Code validation
+        if (!itemCodeRegex.test(itemCode)) {
+            showError("itemCode", "Item code must start with 'I' followed by 3 digits (e.g., I001)");
+            valid = false;
+        } else {
+            clearError("itemCode");
+        }
+
+        // Item Name validation
+        if (!itemNameRegex.test(itemName)) {
+            showError("itemName", "Item name must be at least 3 letters");
+            valid = false;
+        } else {
+            clearError("itemName");
+        }
+
+        // Price validation
+        if (!priceRegex.test(price)) {
+            showError("price", "Enter a valid price (e.g., 10.00)");
+            valid = false;
+        } else {
+            clearError("price");
+        }
+
+        // If all are valid, you can proceed (e.g., send data)
+        if (valid) {
+            alert("Form submitted successfully!");
+            // Here you can submit data to a backend or process further
+        }
+    });
+
+    function showError(fieldId, message) {
+        document.getElementById(fieldId + "Error").textContent = message;
+        document.getElementById(fieldId).classList.add("invalid");
+    }
+
+    function clearError(fieldId) {
+        document.getElementById(fieldId + "Error").textContent = "";
+        document.getElementById(fieldId).classList.remove("invalid");
+    }
+
+</script>
+</body>
+</html>
